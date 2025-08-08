@@ -113,10 +113,11 @@ Error responses include a JSON object with error details:
 
 ## Running the Application
 
-1. Ensure MySQL database is running and accessible
-2. Update database credentials in `application.properties`
-3. Run the Spring Boot application
-4. The API will be available at `http://localhost:8080/api/incomes`
+1. **Environment Setup**: Follow the instructions in `ENVIRONMENT_SETUP.md` to configure your database credentials
+2. **Create .env file**: Copy `.env.example` to `.env` and update with your database credentials
+3. **Ensure MySQL database is running** and accessible
+4. **Run the Spring Boot application**
+5. The API will be available at `http://localhost:8080/api/incomes`
 
 ## Testing
 
