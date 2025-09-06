@@ -17,6 +17,10 @@ public class DriverDAO {
         return driverRepository.findById(id).orElse(null);
     }
 
+    public List<Driver> findAll() {
+        return driverRepository.findAll();
+    }
+
     public List<Driver> findByName(String name) {
         return driverRepository.findByName(name);
     }

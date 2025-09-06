@@ -22,6 +22,13 @@ public class DriverService {
         return convertToDTO(driver);
     }
 
+    public java.util.List<DriverDTO> getAllDrivers() {
+        java.util.List<Driver> drivers = driverDAO.findAll();
+        return drivers.stream()
+                .map(this::convertToDTO)
+                .collect(java.util.stream.Collectors.toList());
+    }
+
     private DriverDTO convertToDTO(Driver driver) {
         return new DriverDTO(driver.getId(), driver.getName(), driver.getLicenseNumber(),
                 driver.getNic(), driver.getContactNumber(), driver.getBankAccountNumber(),
