@@ -52,9 +52,9 @@ public class DataInitializer implements CommandLineRunner {
         income3.setDriverId(2L);
         
         // Save sample data
-        incomeRepository.save(income1);
-        incomeRepository.save(income2);
-        incomeRepository.save(income3);
+        //incomeRepository.save(income1);
+        //incomeRepository.save(income2);
+        //incomeRepository.save(income3);
         
         System.out.println("Sample income data initialized successfully!");
     }
