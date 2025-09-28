@@ -29,5 +29,11 @@ public class DriverController {
     public List<DriverDTO> getAllDrivers() {
         return driverService.getAllDrivers();
     }
+
+    @GetMapping("name")
+    public DriverDTO getDriverByName(@RequestParam String name) {
+        return driverService.findByName(name);
+    }
+    
     
 }
