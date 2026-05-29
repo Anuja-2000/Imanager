@@ -27,7 +27,7 @@ public class TripController {
 
     @PostMapping("/create")
     public ResponseEntity<TripDTO> createTrip(@RequestBody TripDTO tripDetails) {
-        
+        log.info("payload: {}", tripDetails);
         TripDTO createdTrip = tripService.createTrip(tripDetails);
         log.info("Trip created successfully: {}", createdTrip);
         return ResponseEntity.ok(createdTrip);
