@@ -17,14 +17,13 @@ public class TripService {
 
     public TripDTO createTrip(TripDTO tripDTO) {
 
-        tripDAO.createTrip(tripDTO.getEntity());
-        TripDTO createdTrip = new TripDTO(tripDTO.getEntity());
-        return createdTrip;
+        Trip createdTrip = tripDAO.createTrip(tripDTO.getEntity());
+        return new TripDTO(createdTrip);
     }
 
     public TripDTO getTripById(int id) {
         Trip trip = tripDAO.getTripById(id);
-        return trip != null ? new TripDTO(trip) : null; 
+        return new TripDTO(trip);
     }
 
     public List<TripDTO> getAllTrips() {

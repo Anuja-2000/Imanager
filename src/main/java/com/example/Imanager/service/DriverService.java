@@ -29,6 +29,14 @@ public class DriverService {
                 .collect(java.util.stream.Collectors.toList());
     }
 
+    public DriverDTO findByName(String name) {
+        Driver driver = driverDAO.findByName(name).stream().findFirst().orElse(null);
+        if (driver == null) {
+            throw new ResourceNotFoundException("Driver not found with name: " + name);
+        }
+        return convertToDTO(driver);
+    }
+
     private DriverDTO convertToDTO(Driver driver) {
         return new DriverDTO(driver.getId(), driver.getName(), driver.getLicenseNumber(),
                 driver.getNic(), driver.getContactNumber(), driver.getBankAccountNumber(),

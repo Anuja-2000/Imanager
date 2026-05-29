@@ -25,7 +25,7 @@ public class Driver {
     @Column(name = "bank_account_number")
     private String bankAccountNumber;
 
-    @Column(name = "commission_percentage")
+    @Column(name = "comission_percentage")
     private String commissionPercentage;
 
     // Default constructor

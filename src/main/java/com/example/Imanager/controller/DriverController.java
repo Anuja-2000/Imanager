@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/api/drivers")
+@RequestMapping("/drivers")
 @CrossOrigin(origins = "*")
 public class DriverController {
 
@@ -29,5 +29,11 @@ public class DriverController {
     public List<DriverDTO> getAllDrivers() {
         return driverService.getAllDrivers();
     }
+
+    @GetMapping("name")
+    public DriverDTO getDriverByName(@RequestParam String name) {
+        return driverService.findByName(name);
+    }
+    
     
 }

@@ -2,6 +2,12 @@ package com.example.Imanager.dto;
 
 import com.example.Imanager.entity.Trip;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class TripDTO {
     
     private int id;

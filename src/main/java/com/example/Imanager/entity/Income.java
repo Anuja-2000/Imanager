@@ -15,10 +15,10 @@ public class Income {
     @Column(name = "type")
     private String type;
     
-    @Column(name = "start")
+    @Column(name = "start_time")
     private LocalDateTime start;
     
-    @Column(name = "end")
+    @Column(name = "end_time")
     private LocalDateTime end;
     
     @Column(name = "distance")

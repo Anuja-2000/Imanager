@@ -12,7 +12,7 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo Step 2: Building Docker image...
-docker build -t imanager-app .
+docker build -t anujawij402/imanager-app .
 
 if %ERRORLEVEL% neq 0 (
     echo ERROR: Failed to build Docker image
